@@ -1,11 +1,18 @@
-DROP TABLE genre;
 DROP TABLE albums;
+DROP TABLE genres;
 DROP TABLE artists;
+
 
 CREATE TABLE artists
 (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE genres
+(
+  id SERIAL8 PRIMARY KEY,
+  type VARCHAR(255)  
 );
 
 CREATE TABLE albums
@@ -14,12 +21,6 @@ CREATE TABLE albums
   title VARCHAR(255) NOT NULL,
   quantity INT4,
   cost_price INT4,
-  artist_id INT8 REFERENCES artists(id)
+  artist_id INT8 REFERENCES artists(id),
   genre_id INT8 REFERENCES genres(id)
-);
-
-CREATE TABLE genres
-(
-  id SERIAL8 PRIMARY KEY,
-  type VARCHAR(255)  
 );
