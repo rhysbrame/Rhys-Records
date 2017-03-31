@@ -15,10 +15,10 @@ CREATE TABLE albums
   quantity INT4,
   cost_price INT4,
   artist_id INT8 REFERENCES artists(id)
-  genre_id INT8 REFERENCES genre(id)
+  genre_id INT8 REFERENCES genres(id)
 );
 
-CREATE TABLE genre
+CREATE TABLE genres
 (
   id SERIAL8 PRIMARY KEY,
   type VARCHAR(255)  
