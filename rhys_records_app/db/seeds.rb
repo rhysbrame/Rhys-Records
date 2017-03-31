@@ -1,6 +1,8 @@
 require_relative('../models/artist')
 require('pry')
 
+Artist.delete_all
+
 artist1 = Artist.new({
   'name' => 'Father John Misty'
 })
