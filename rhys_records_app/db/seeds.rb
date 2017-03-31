@@ -15,3 +15,5 @@ artist2 = Artist.new({
 
 artist2.save()
 
+binding.pry
+nil
