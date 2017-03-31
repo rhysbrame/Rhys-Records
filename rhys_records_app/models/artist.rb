@@ -22,8 +22,8 @@ class Artist
     return results.map { |artist_hash| Artist.new(artist_hash)}
   end
   
-  def self.find()
-    sql = ""
+  def self.find(id)
+    sql = "SELECT * FROM artists WHERE id = #{id}"
     result = SqlRunner.run(sql)
   end
 
