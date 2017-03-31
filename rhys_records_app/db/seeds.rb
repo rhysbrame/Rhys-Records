@@ -6,3 +6,10 @@ artist1 = Artist.new({
 })
 
 artist1.save()
+
+artist2 = Artist.new({
+  'name' => 'Ryan Adams'
+})
+
+artist2.save()
+

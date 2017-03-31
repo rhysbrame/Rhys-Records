@@ -16,4 +16,15 @@ class Artist
     @id = results.first()['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM artists"
+    results = SqlRunner.run(sql)
+    return results.map { |artist_hash| Artist.new(artist_hash)}
+  end
+  
+  def self.find()
+    sql = ""
+    result = SqlRunner.run(sql)
+  end
+
 end
