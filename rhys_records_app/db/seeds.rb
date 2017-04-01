@@ -1,7 +1,9 @@
 require_relative('../models/artist')
 require_relative('../models/album')
+require_relative('../models/genre')
 require('pry')
 
+Genre.delete_all()
 Album.delete_all()
 Artist.delete_all()
 
@@ -44,5 +46,20 @@ album1 = Album.new({
 
 album1.save()
 
+genre1 = Genre.new({
+  'type' => 'Acoustic'
+  })
+
+genre1.save()
+
 binding.pry
 nil
+
+
+
+
+
+
+
+
+
