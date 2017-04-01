@@ -22,6 +22,11 @@ class Genre
     return results.map{ |album_by_genre_hash| Album.new(album_by_genre_hash) }
   end
 
+  def artists()
+    sql = "SELECT * FROM genres g INNER JOIN albums b ON b.genre_id =g.id INNER JOIN artists a ON b.artist_id = a.id WHERE g.id = #{@id}"
+    results = 
+  end
+
   def self.all()
     sql = "SELECT * FROM genres"
     results = SqlRunner.run(sql)
