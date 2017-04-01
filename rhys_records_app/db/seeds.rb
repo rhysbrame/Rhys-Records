@@ -1,7 +1,9 @@
 require_relative('../models/artist')
+require_relative('../models/album')
 require('pry')
 
-Artist.delete_all
+Album.delete_all()
+Artist.delete_all()
 
 artist1 = Artist.new({
   'name' => 'Father John Misty'
@@ -33,6 +35,14 @@ artist5 = Artist.new({
 
 artist5.save()
 
+album1 = Album.new({
+  'title' => 'Blonde on Blonde',
+  'quantity' => 1,
+  'cost_price' => 26,
+  'artist_id' => artist5.id
+})
+
+album1.save()
 
 binding.pry
 nil
