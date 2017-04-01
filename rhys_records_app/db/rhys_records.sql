@@ -12,7 +12,7 @@ CREATE TABLE artists
 CREATE TABLE genres
 (
   id SERIAL8 PRIMARY KEY,
-  type VARCHAR(255)  
+  type VARCHAR(255) NOT NULL 
 );
 
 CREATE TABLE albums

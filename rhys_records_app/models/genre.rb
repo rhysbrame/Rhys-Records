@@ -5,7 +5,7 @@ class Genre
   attr_reader :id, :type
 
   def initialize(options)
-    @id = options['id'].to_i
+    @id = nil || options['id'].to_i
     @type = options['type']
   end
 
@@ -34,3 +34,11 @@ class Genre
   end
 
 end
+
+
+
+
+
+
+
+
