@@ -12,7 +12,7 @@ class Artist
 
   def save()
     sql = "INSERT INTO artists ( name )
-    VALUES ('#{name}') RETURNING *"
+    VALUES ('#{@name}') RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
   end
