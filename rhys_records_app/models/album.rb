@@ -1,5 +1,6 @@
 require_relative('../db/sql_runner')
 
+
 class Album
 
   attr_accessor :quantity 
@@ -18,6 +19,12 @@ class Album
     VALUES ('#{@title}', #{@quantity}, #{@cost_price}, #{@artist_id}, #{@genre_id} ) RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
+  end
+
+  def artist()
+    sql = "SELECT * FROM albums WHERE id = #{@artist_id}"
+    artist_hash = SqlRunner.run(sql).first
+    return Artist.new(artist_hash)
   end
 
   def self.all()

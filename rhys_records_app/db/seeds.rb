@@ -106,15 +106,18 @@ album5 = Album.new({
 
 album5.save()
 
+album6 = Album.new({
+  'title' => 'Heartbreaker',
+  'quantity' => 1,
+  'cost_price' => 55,
+  'artist_id' => artist2.id,
+  'genre_id' => genre1.id
+})
+
+album6.save()
+
 binding.pry
 nil
-
-
-
-
-
-
-
 
 
 
