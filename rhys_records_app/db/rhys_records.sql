@@ -21,6 +21,6 @@ CREATE TABLE albums
   title VARCHAR(255) NOT NULL,
   quantity INT4,
   cost_price INT4,
-  artist_id INT8 REFERENCES artists(id),
-  genre_id INT8 REFERENCES genres(id)
+  artist_id INT8 REFERENCES artists(id) ON DELETE CASCADE,
+  genre_id INT8 REFERENCES genres(id) ON DELETE CASCADE
 );

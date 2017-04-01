@@ -44,6 +44,18 @@ genre1 = Genre.new({
 
 genre1.save()
 
+genre2 = Genre.new({
+  'type' => 'Indie'
+})
+
+genre2.save()
+
+genre3 = Genre.new({
+  'type' => 'Rock'
+})
+
+genre3.save()
+
 album1 = Album.new({
   'title' => 'Blonde on Blonde',
   'quantity' => 1,
@@ -59,7 +71,7 @@ album2 = Album.new({
   'quantity' => 1,
   'cost_price' => 25,
   'artist_id' => artist4.id,
-  'genre_id' => genre1.id
+  'genre_id' => genre2.id
 })
 
 album2.save()
@@ -69,7 +81,7 @@ album3 = Album.new({
   'quantity' => 1,
   'cost_price' => 45,
   'artist_id' => artist2.id,
-  'genre_id' => genre1.id
+  'genre_id' => genre3.id
 })
 
 album3.save()
@@ -79,7 +91,7 @@ album4 = Album.new({
   'quantity' => 1,
   'cost_price' => 21,
   'artist_id' => artist3.id,
-  'genre_id' => genre1.id
+  'genre_id' => genre2.id
 })
 
 album4.save()
@@ -89,7 +101,7 @@ album5 = Album.new({
   'quantity' => 1,
   'cost_price' => 19,
   'artist_id' => artist1.id,
-  'genre_id' => genre1.id
+  'genre_id' => genre2.id
 })
 
 album5.save()
