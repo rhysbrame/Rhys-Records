@@ -7,3 +7,7 @@ require('controllers/genres_controller')
 get '/' do
   erb(:index)
 end
+
+get '' do
+  redirect '/'
+end
