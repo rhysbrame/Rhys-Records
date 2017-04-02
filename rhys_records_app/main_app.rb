@@ -1,8 +1,8 @@
 require('sinatra')
 require('sinatra/contrib/all')
-require('controllers/artists_controller')
-require('controllers/albums_controller')
-require('controllers/genres_controller')
+require_relative('./controllers/artists_controller')
+require_relative('./controllers/genres_controller')
+require_relative('./controllers/albums_controller')
 
 get '/' do
   erb(:index)
