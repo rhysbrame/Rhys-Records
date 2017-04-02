@@ -1,3 +1,18 @@
 <h>Rhys' Records</h>
 
-<p>artists</p>
+<p>artist view index</p>
+
+<h1>Artists</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+  </tr>
+  <% for artist in @artists %>
+  <tr>
+    <td><%= artist.name %></td>
+    <td>|</td>
+  </tr>
+  <% end %>
+</table>
