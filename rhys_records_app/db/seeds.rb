@@ -1,7 +1,6 @@
 require_relative('../models/artist')
 require_relative('../models/genre')
 require_relative('../models/album')
-
 require('pry')
 
 Album.delete_all()
