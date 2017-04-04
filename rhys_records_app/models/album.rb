@@ -22,13 +22,15 @@ class Album
   end
 
   def artist()
-    sql = "SELECT * FROM artists a INNER JOIN albums b ON b.artist_id =a.id WHERE a.id = #{@artist_id}"
+    # sql = "SELECT * FROM artists a INNER JOIN albums b ON b.artist_id =a.id WHERE a.id = #{@artist_id}"
+    sql = "SELECT * FROM artists WHERE id = #{@artist_id}"
     artist_hash = SqlRunner.run(sql).first
     return Artist.new(artist_hash)
   end
 
   def genre()
-    sql = "SELECT * FROM artists a INNER JOIN albums b ON b.artist_id = a.id INNER JOIN genres g ON b.genre_id = g.id WHERE b.id = #{@id}"
+    # sql = "SELECT * FROM artists a INNER JOIN albums b ON b.artist_id = a.id INNER JOIN genres g ON b.genre_id = g.id WHERE b.id = #{@id}"
+    sql = "SELECT * FROM genres WHERE id = #{@genre_id}"
     genre_hash = SqlRunner.run(sql).first
     return Genre.new(genre_hash)
   end

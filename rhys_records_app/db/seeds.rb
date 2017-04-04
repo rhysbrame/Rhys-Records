@@ -85,5 +85,5 @@ album6 = Album.new({
 })
 album6.save()
 
-# Binding.pry
-# Nil
+binding.pry
+nil
