@@ -1,16 +1,18 @@
-<p>artist view index</p>
+<p>artists index</p>
 
 <h1>Artists</h1>
 <a href="/artists/new">New Artist</a>
 <table>
   <tr>
     <th>Name</th>
-    <th></th>
+    <th>|</th>
+    <th>Show</th>
   </tr>
   <% for artist in @artists %>
   <tr>
     <td><%= artist.name %></td>
-    <td></td>
+    <td>|</td>
+    <td><a href='/artists/<%= artist.id%>'>Show Artist</a></td>
   </tr>
   <% end %>
 </table>
