@@ -41,11 +41,3 @@ post '/artists/:id/delete' do
   @artist.delete()
   redirect ('/artists')
 end
-
-
-
-
-
-
-
-
