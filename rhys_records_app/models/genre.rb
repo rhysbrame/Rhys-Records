@@ -16,6 +16,16 @@ class Genre
     @id = results.first()['id'].to_i
   end
 
+  def delete()
+    sql = "DELETE FROM genres WHERE id = #{@id}"
+    SqlRunner.run(sql)
+  end
+
+  def update()
+    sql = "UPDATE genres SET ( type ) = ('#{@type}') WHERE id = #{@id}"
+    SqlRunner.run(sql)
+  end
+
   def albums()
     sql = "SELECT * FROM genres g INNER JOIN albums b ON b.genre_id =g.id WHERE g.id = #{@id}"
     results = SqlRunner.run(sql)

@@ -1,0 +1,5 @@
+<form method='post' action='/genres/<%=@genre.id%>'>
+  <label for="type">Type:</label>
+  <input id="type" type="text" name="type" value="<%= @genre.type %>" />
+  <input type='submit' value='edit' />
+</form>
