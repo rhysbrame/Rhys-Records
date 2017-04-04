@@ -1,6 +1,6 @@
 require_relative('../models/artist.rb')
 
-#ndex
+#index
 get '/artists' do
   @artists = Artist.all()
   erb ( :'artists/index' )

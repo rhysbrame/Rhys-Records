@@ -1,1 +1,8 @@
-hello world
+<p>Name <%= @artist.name %></p>
+
+<% for album in @artist.albums %>
+<p>title <%= album.title  %></p>
+<p>quantity <%= album.quantity  %></p>
+<p>cost_price <%= album.cost_price  %></p>
+
+<% end %>
