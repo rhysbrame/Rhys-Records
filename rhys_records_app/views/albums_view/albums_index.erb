@@ -7,12 +7,18 @@
 <table>
   <tr>
     <th>title</th>
-    <th></th>
+    <th>cost</th>
+    <th>quantity</th>
+    <th>artist</th>
+    <th>genre</th>
   </tr>
   <% for album in @albums %>
   <tr>
     <td><%= album.title %></td>
-    <td></td>
+    <td><%= album.cost_price %></td>
+    <td><%= album.quantity %></td>  
+    <td><%= album.artist.name %></td>  
+    <td><%= @genre.type %></td>  
   </tr>
   <% end %>
 </table>

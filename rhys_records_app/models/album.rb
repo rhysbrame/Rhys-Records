@@ -27,6 +27,12 @@ class Album
     return Artist.new(artist_hash)
   end
 
+  def genre()
+    sql = "SELECT"
+    genre_hash = SqlRunner.run(sql).first
+    return Genre.new(genre_hash)
+  end
+
   def self.all()
     sql = "SELECT * FROM albums"
     results = SqlRunner.run(sql)
