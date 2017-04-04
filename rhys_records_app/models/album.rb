@@ -28,7 +28,7 @@ class Album
   end
 
   def genre()
-    sql = "SELECT"
+    sql = "SELECT * FROM artists a INNER JOIN albums b ON b.artist_id = a.id INNER JOIN genres g ON b.genre_id = g.id WHERE b.id = #{@id}"
     genre_hash = SqlRunner.run(sql).first
     return Genre.new(genre_hash)
   end
