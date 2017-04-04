@@ -1,0 +1,18 @@
+<h>Rhys' Records</h>
+
+<p>genre view index</p>
+
+<h1>Genres</h1>
+
+<table>
+  <tr>
+    <th>title</th>
+    <th></th>
+  </tr>
+  <% for album in @albums %>
+  <tr>
+    <td><%= album.title %></td>
+    <td>|</td>
+  </tr>
+  <% end %>
+</table>
