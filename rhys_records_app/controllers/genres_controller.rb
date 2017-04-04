@@ -14,5 +14,11 @@ end
 post '/genres' do
   @genre = Genre.new(params)
   @genre.save
-  redirect to ('/genre')
+  redirect to ('/genres')
+end
+
+#show genres
+get '/genres/:id' do
+  @genre = Genre.find(params[:id])
+  erb ( :'genres/show' )
 end
