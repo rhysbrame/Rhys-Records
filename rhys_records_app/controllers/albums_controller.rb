@@ -1,13 +1,10 @@
 require_relative('../models/album.rb')
-require('pry')
 
-#index
 get '/albums' do
   @albums = Album.all()
   erb ( :'albums/index' )
 end
 
-#new album
 get '/albums/new' do
   @artist = Artist.all
   @genre = Genre.all
@@ -20,13 +17,11 @@ post '/albums' do
   redirect to ('/albums')
 end
 
-#show albums
 get '/albums/:id' do 
   @album = Album.find(params[:id])
   erb ( :'albums/show')
 end
 
-#update albums
 get '/albums/:id/edit' do
   @album = Album.find(params[:id])
   @artists = Artist.all
@@ -40,14 +35,8 @@ post '/albums/:id' do
   erb ( :'albums/show')
 end
 
-#delete album
 post '/albums/:id/delete' do
   @album = Album.find(params[:id])
   @album.delete()
   redirect ('/albums')
 end
-
-
-
-
-
