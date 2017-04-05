@@ -17,6 +17,7 @@
     <td><%= album.quantity %></td>  
     <td><%= album.artist.name %></td>  
     <td><%= album.genre.type %></td>  
+    <td><a href='/albums/<%= album.id %>/edit'>Edit</a></td>
   </tr>
   <% end %>
 </table>
