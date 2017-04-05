@@ -1,1 +1,37 @@
-Yo
+<form action='/albums' method='post'>
+
+  <p>Album Title</p>
+  <input type='text' name='title'/>
+
+  <p>Quantity</p>
+  <input type='text' name='quantity'>
+
+  <p>Cost Price</p>
+  <input type='text' name='cost_price'>
+
+  <p>
+    <p>Artist</p>
+    <label>
+      <select name='artist_id'>
+        <% for artist in @artist %>
+        <option value='<%= artist.id %>'><%= artist.name %>
+        <% end %>    
+      </select>
+    </label>
+  </p>
+
+  <p>
+    <p>Genre</p>
+    <label>
+      <select name='genre_id'>
+      <% for genre in @genre %>
+      <option value='<%= genre.id  %>'><%= genre.type %>
+      <% end %>
+      </select>
+    </label>
+  </p>
+
+  <p>Submit</p>
+  <input type='submit' value='New Album'>
+
+</form>

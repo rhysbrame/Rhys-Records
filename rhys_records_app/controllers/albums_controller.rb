@@ -9,6 +9,13 @@ end
 
 #new album
 get '/albums/new' do
+  @artist = Artist.all
+  @genre = Genre.all
   erb (:'albums/new')
 end
 
+post '/albums' do 
+  @album = Album.new(params)
+  @album.save
+  redirect to ('/albums')
+end
