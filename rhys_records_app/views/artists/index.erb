@@ -7,13 +7,17 @@
     <th>Name</th>
     <th>|</th>
     <th>Show</th>
+    <th>|</th>
+    <th>Edit</th>
   </tr>
   <% for artist in @artists %>
   <tr>
     <td><%= artist.name %></td>
     <td>|</td>
     <td><a href='/artists/<%= artist.id%>'>Show Artist</a></td>
-  </tr>
+    <td>|</td>
+    <td><a href='/artists/<%= artist.id %>/edit'>EDIT</a></td>
+  </tr>  
   <% end %>
 </table>
 

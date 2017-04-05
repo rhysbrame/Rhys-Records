@@ -33,7 +33,7 @@ genre3.save()
 
 album1 = Album.new({
   'title' => 'Blonde on Blonde',
-  'quantity' => 1,
+  'quantity' => 10,
   'cost_price' => 90,
   'artist_id' => artist5.id,
   'genre_id' => genre1.id
@@ -42,7 +42,7 @@ album1.save()
 
 album2 = Album.new({
   'title' => 'Z',
-  'quantity' => 1,
+  'quantity' => 15,
   'cost_price' => 25,
   'artist_id' => artist4.id,
   'genre_id' => genre2.id
@@ -51,7 +51,7 @@ album2.save()
 
 album3 = Album.new({
   'title' => 'Gold',
-  'quantity' => 1,
+  'quantity' => 20,
   'cost_price' => 45,
   'artist_id' => artist2.id,
   'genre_id' => genre3.id
@@ -60,7 +60,7 @@ album3.save()
 
 album4 = Album.new({
   'title' => 'The Courage of Others',
-  'quantity' => 1,
+  'quantity' => 5,
   'cost_price' => 21,
   'artist_id' => artist3.id,
   'genre_id' => genre2.id
@@ -69,7 +69,7 @@ album4.save()
 
 album5 = Album.new({
   'title' => 'Fear Fun',
-  'quantity' => 1,
+  'quantity' => 25,
   'cost_price' => 19,
   'artist_id' => artist1.id,
   'genre_id' => genre2.id
@@ -78,7 +78,7 @@ album5.save()
 
 album6 = Album.new({
   'title' => 'Heartbreaker',
-  'quantity' => 1,
+  'quantity' => 5,
   'cost_price' => 55,
   'artist_id' => artist2.id,
   'genre_id' => genre1.id
