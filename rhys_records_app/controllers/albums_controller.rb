@@ -19,3 +19,9 @@ post '/albums' do
   @album.save
   redirect to ('/albums')
 end
+
+#show albums
+get '/albums/:id' do 
+  @albums = Album.find(params[:id])
+  erb ( :'albums/show')
+end
