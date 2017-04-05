@@ -36,6 +36,18 @@ end
 
 post '/albums/:id' do
   @album = Album.new(params)
-  @album.update
+  @album.update()
   erb ( :'albums/show')
 end
+
+#delete album
+post '/albums/:id/delete' do
+  @album = Album.find(params[:id])
+  @album.delete()
+  redirect ('/albums')
+end
+
+
+
+
+

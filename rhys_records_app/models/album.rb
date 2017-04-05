@@ -21,6 +21,11 @@ class Album
     @id = results.first()['id'].to_i
   end
 
+  def delete()
+    sql = "DELETE FROM albums WHERE id = #{@id}"
+    SqlRunner.run(sql)
+  end
+
   def artist()
     # sql = "SELECT * FROM artists a INNER JOIN albums b ON b.artist_id =a.id WHERE a.id = #{@artist_id}"
     sql = "SELECT * FROM artists WHERE id = #{@artist_id}"
