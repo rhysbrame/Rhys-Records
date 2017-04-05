@@ -1,4 +1,5 @@
 require_relative('../models/album.rb')
+require('pry')
 
 #index
 get '/albums' do
@@ -28,11 +29,13 @@ end
 #update albums
 get '/albums/:id/edit' do
   @album = Album.find(params[:id])
+  @artists = Artist.all
+  @genres = Genre.all
   erb ( :'albums/edit')
 end
 
 post '/albums/:id' do
   @album = Album.new(params)
-  @artist.update
+  @album.update
   erb ( :'albums/show')
 end

@@ -35,6 +35,11 @@ class Album
     return Genre.new(genre_hash)
   end
 
+  def update()
+    sql = "UPDATE albums SET (title, quantity, cost_price, artist_id, genre_id) = ('#{@title}', #{@quantity}, #{@cost_price}, #{@artist_id}, #{@genre_id}) WHERE id = #{@id}"
+    SqlRunner.run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM albums"
     results = SqlRunner.run(sql)
