@@ -4,21 +4,21 @@
   <title>Rhys' Records</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="icon" href="/images/insert.jpg"/>
-
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
-
+  <link rel="stylesheet" type="text/css" href="/styles/style.css">
 </head>
 <body>
+<header>
 <main class="flex flex--row">
   <nav>
     <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/artists">All Artists</a></li>
-    <li><a href="/albums">All Albums</a></li> 
-    <li><a href="/genres">All Genres</a></li>
+    <a href="/"><li>Home</li></a>
+    <a href="/artists"><li>Artists</li></a>
+    <a href="/albums"><li>Albums</li> </a>
+    <a href="/genres"><li>Genres</li></a>
     </ul>
   </nav>
-  <h>Rhys' Records</h>
+</header>
+  <h1>Rhys' Records</h1>
   <br>
   <%= yield %>
 </body>
