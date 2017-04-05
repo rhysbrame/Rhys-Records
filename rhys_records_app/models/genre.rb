@@ -56,11 +56,3 @@ class Genre
   end
 
 end
-
-
-
-
-
-
-
-
