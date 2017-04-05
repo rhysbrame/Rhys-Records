@@ -1,7 +1,6 @@
 require( 'pg' )
 
 class SqlRunner
-
   def self.run( sql )
     begin
       db = PG.connect({ dbname: 'rhys_records', host: 'localhost' })
@@ -11,5 +10,4 @@ class SqlRunner
     end
     return result
   end
-
 end
