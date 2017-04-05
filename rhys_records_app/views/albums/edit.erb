@@ -1,27 +1,37 @@
 <form method='post' action='/albums/<%= @album.id %>'>
 
-  <label for='Title'>Title:</label>
-  <input id='title' type='text' name='title' value= '<%= @album.title %>' />
-  
-  <label for='Quantity'>Quantity:</label>
-  <input id='quantity' type='text' name='quantity' value= '<%= @album.quantity %>' />
-  
-  <label for='Cost'>Cost:</label>
-  <input id='cost_price' type='text' name='cost_price' value= '<%= @album.cost_price %>' />
+  <p>
+    <label for='Title'>Title:</label>
+    <input id='title' type='text' name='title' value= '<%= @album.title %>' />
+  </p>
 
- <label for='artist-name'>Artist:</label>
-  <select name='artist_id'>
-    <% @artists.each do |artist| %>
+  <p>
+    <label for='Quantity'>Quantity:</label>
+    <input id='quantity' type='text' name='quantity' value= '<%= @album.quantity %>' />
+  </p>
+
+  <p>
+    <label for='Cost'>Cost:</label>
+    <input id='cost_price' type='text' name='cost_price' value= '<%= @album.cost_price %>' />
+  </p>
+
+  <p>
+    <label for='artist-name'>Artist:</label>
+    <select name='artist_id'>
+      <% @artists.each do |artist| %>
       <option value=<%= artist.id %>><%= artist.name %></option>
-    <% end %>
-  </select>
+      <% end %>
+    </select>
+  </p>
 
- <label for='genre-type'>Genre:</label>
- <select name='genre_id'>
-   <% @genres.each do |genre| %>
-     <option value=<%= genre.id %>><%= genre.type %></option>
-   <% end %>
- </select>
+  <p>
+    <label for='genre-type'>Genre:</label>
+    <select name='genre_id'>
+      <% @genres.each do |genre| %>
+      <option value=<%= genre.id %>><%= genre.type %></option>
+      <% end %>
+    </select>
+  </p>
 
   <input type='submit' value='edit' />
 </form>

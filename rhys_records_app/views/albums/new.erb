@@ -1,16 +1,18 @@
 <form action='/albums' method='post'>
 
-  <p>Album Title</p>
-  <input type='text' name='title' required/>
+  <p>Album Title
+    <input type='text' name='title' required/>
+  </p>
 
-  <p>Quantity</p>
-  <input type='text' name='quantity' required/>
+  <p>Quantity
+    <input type='text' name='quantity' required/>
+  </p>
 
-  <p>Cost Price</p>
-  <input type='text' name='cost_price' required/>
-
-  <p>
-    <p>Artist</p>
+  <p>Cost Price
+    <input type='text' name='cost_price' required/>
+  </p>
+  
+  <p>Artist
     <label>
       <select name='artist_id'>
         <% for artist in @artist %>
@@ -20,18 +22,16 @@
     </label>
   </p>
 
-  <p>
-    <p>Genre</p>
+  <p>Genre
     <label>
       <select name='genre_id'>
-      <% for genre in @genre %>
-      <option value='<%= genre.id  %>'><%= genre.type %>
-      <% end %>
+        <% for genre in @genre %>
+        <option value='<%= genre.id  %>'><%= genre.type %>
+        <% end %>
       </select>
     </label>
   </p>
-
-  <p>Submit</p>
-  <input type='submit' value='New Album'>
+      
+  <input type='submit' value='Submit New Album'>
 
 </form>

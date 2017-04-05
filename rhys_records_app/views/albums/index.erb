@@ -2,23 +2,23 @@
 
 <table>
   <tr>
-    <th>title</th>
-    <th>cost</th>
-    <th>quantity</th>
-    <th>artist</th>
-    <th>genre</th>
+    <th>Title</th>
+    <th>Cost</th>
+    <th>Quantity</th>
+    <th>Artist</th>
+    <th>Genre</th>
   </tr>
   <% for album in @albums %>
   <tr>
-    <td><%= album.title %></td>
-    <td><%= album.cost_price %></td>
-    <td><%= album.quantity %></td>  
-    <td><%= album.artist.name %></td>  
-    <td><%= album.genre.type %></td>  
-    <td><a href='/albums/<%= album.id %>/edit'>Edit</a></td>
+    <td><a href='/albums/<%= album.id%>'><%= album.title %></td>
+    <td><a href='/albums/<%= album.id%>'>£<%= album.cost_price %></td>
+    <td><a href='/albums/<%= album.id%>'><%= album.quantity %></td>  
+    <td><a href='/albums/<%= album.id%>'><%= album.artist.name %></td>  
+    <td><a href='/albums/<%= album.id%>'><%= album.genre.type %></td>  
   </tr>
   <% end %>
 </table>
-
+<br>
+<br>
+<br>
 <a href="/albums/new">New Album</a>
-
