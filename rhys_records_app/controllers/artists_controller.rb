@@ -1,12 +1,10 @@
 require_relative('../models/artist.rb')
 
-#index
 get '/artists' do
   @artists = Artist.all()
   erb ( :'artists/index' )
 end
 
-#new artist
 get '/artists/new' do
   erb ( :'artists/new')
 end
@@ -17,13 +15,11 @@ post '/artists' do
   redirect to ('/artists')
 end
 
-#show artists
 get '/artists/:id' do
   @artist = Artist.find(params[:id])
   erb ( :'artists/show' )
 end
 
-#update artists
 get '/artists/:id/edit' do
   @artist = Artist.find(params[:id])
   erb ( :'artists/edit')
@@ -35,7 +31,6 @@ post '/artists/:id' do
   erb ( :'artists/show' )
 end
 
-#delete artist
 post '/artists/:id/delete' do
   @artist = Artist.find(params[:id])
   @artist.delete()
