@@ -1,9 +1,20 @@
-
-<p>Title <%= @album.title  %></p>
-<p>Quantity <%= @album.quantity  %></p>
-<p>Price <%= @album.cost_price  %></p>
-<p>Artist <%= @album.artist.name  %></p>
-<p>Genre <%= @album.genre.type  %></p>
+<table>
+  <tr>
+    <th>Title</th><th><%= @album.title  %></th>
+  </tr>
+  <tr>
+    <th>Cost</th><th>£<%= @album.cost_price  %></th>
+  </tr>
+  <tr>
+    <th>Quantity</th><th><%= @album.quantity  %></th>
+  </tr>
+  <tr>
+    <th>Artist</th><th><%= @album.artist.name  %></th>
+  </tr>
+  <tr>
+    <th>Genre</th><th><%= @album.genre.type  %></th>
+  </tr>
+</table>
 
 <p><a href='/albums/<%= @album.id %>/edit'>Edit</a></p>
 

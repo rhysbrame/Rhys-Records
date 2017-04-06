@@ -5,7 +5,8 @@ html {
 
 table {
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
+  padding: 15px;
 }
 
 body {
@@ -21,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-family: 'Lato', sans-serif;
-  color: red;
+  color: black;
 }
 
 tr:hover {
