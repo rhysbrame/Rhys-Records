@@ -9,7 +9,7 @@ You should be able to add stock, which would have an Artist and Album as well as
 - Create albums with the quantity that are in stock
 - Create artists
 - Show an inventory page listing albums and artists
-- Show a stock level for the inventory items e.g. High/Medium/Low
+
 
 ### Possible Extensions:
 
