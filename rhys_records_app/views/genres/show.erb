@@ -1,13 +1,6 @@
 <section id='genre-show'>
-
-<p>Type <%= @genre.type %></p>
-
-<% for artist in @genre.artists %>
-<p>name <%= artist.name %>
-<% end %>
-
-<br>
-<br>
-<br>
+  <h2><%= @genre.type %></h2>
+  <% for artist in @genre.artists %>
+  <p><%= artist.name %></p>
+  <% end %>
 </section>
-Add function here to show all albums in the genre type
